@@ -13,6 +13,7 @@ const CardImage = styled.img`
     height: 60px;
     border-radius: 50%;
     box-shadow: 0 0 0 5px #aaa;
+    pointer-events: none;
 `;
 
 const Name = styled.div`
