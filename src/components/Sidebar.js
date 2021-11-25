@@ -16,7 +16,8 @@ import setParent from '../redux/actions/setParent';
  */
 function SideBar({
     employees = {},
-    setParentEl
+    setParentEl,
+    rootParent
 }) {
     const [serachValue, setValue] = useState("")
     return (
@@ -36,7 +37,7 @@ function SideBar({
                                 e && e.preventDefault();
                                 setParentEl(key)
                             }} key={index}>
-                                <ListProfile employee={employees[key]} />
+                                <ListProfile isActive={key === rootParent} employee={employees[key]} />
                             </li>
                         )
                     })
@@ -46,9 +47,10 @@ function SideBar({
     );
 }
 
-const mapStateToProps = ({ employees }) => {
+const mapStateToProps = ({ employees, rootParent }) => {
     return {
-        employees
+        employees,
+        rootParent
     };
 };
 

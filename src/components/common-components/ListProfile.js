@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const Root = styled.div`
     cursor: pointer;
@@ -13,6 +13,15 @@ const Root = styled.div`
     &:hover {
         background: #333;
         color: white;
+    }
+    ${(props) => props.isActive &&
+        css`
+        background: #04aa6d;
+        color: white;
+        &:hover {
+            background: #04aa6d;
+        }
+        `
     }
 `;
 
@@ -46,11 +55,12 @@ const RightContainer = styled.div`
  * @returns 
  */
 const ListProfile = ({
-    employee
+    employee,
+    isActive
 }) => {
 
     return (
-        <Root>
+        <Root isActive={isActive}>
             <LeftContainer>
                 <img src={employee.img} alt="" />
             </LeftContainer>

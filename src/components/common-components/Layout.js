@@ -42,7 +42,7 @@ const LeftSiderBar = styled.div`
         text-decoration: none;
       }
       
-      li span.active {
+      li.active {
         background-color: #04aa6d;
         color: white;
       }
