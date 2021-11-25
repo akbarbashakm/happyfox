@@ -25,10 +25,6 @@ new Server({
         ...DB
       }
     });
-
-    this.put(Api.CHANGE_EMPLOYEE_URL, (schema, reques) => {
-      debugger
-    })
   }
 })
 

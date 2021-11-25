@@ -2,7 +2,11 @@ import ActionTypes from "../constants/action-types";
 
 export const initialState = {
   employees: {},
-  activeEmp: null
+  activeEmp: null,
+  toast: {
+    isVisible: false,
+    message: null
+  }
 };
 
 export default function reducer(state = initialState, action) {
@@ -25,6 +29,14 @@ export default function reducer(state = initialState, action) {
         activeEmp: payload || null
       }
       break;
+      case ActionTypes.SET_TOAST:
+        finalState = {
+          ...finalState,
+          toast: {
+            ...payload
+          }
+        }
+        break;
     case ActionTypes.DRAG_EMPLOYEE:
       const { currentId, newId } = payload;
       finalState = {

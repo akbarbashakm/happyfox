@@ -6,13 +6,16 @@ import { Logo, Title } from './components/common-components/Card';
 import { Header, Main, Layout } from './components/common-components/Layout';
 import { Org } from './components/common-components/Org';
 import Profile from './components/common-components/Profile';
+import Toast from './components/common-components/Toast';
 import Node from './components/Node';
 import Sidebar from './components/Sidebar';
 import getAllEmployees from './redux/actions/getAllEmployees';
 
 
 function App({
-  getAllData
+  getAllData,
+  isVisible,
+  message
 }) {
   useEffect(() => {
     getAllData();
@@ -32,9 +35,22 @@ function App({
         </Main>
       </Layout>
       <Profile />
+      <Toast isVisible={isVisible}>
+        {message}
+      </Toast>
     </div>
   );
 }
+
+const mapStateToProps = ({
+  toast
+}) => {
+  const { isVisible, message } = toast;
+  return {
+    isVisible,
+    message
+  }
+};
 
 const mapDispatchToProps = (dispatch) => {
   return {
@@ -42,4 +58,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(null, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);
