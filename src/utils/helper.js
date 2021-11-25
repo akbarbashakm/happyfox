@@ -35,7 +35,7 @@ export const getParents = (data, id) => {
  */
 export const search = (obj, txt) => {
     const arr = Object.keys(obj);
-    return arr.filter(key => Object.values(obj[key]).some(val => (val || '').toLowerCase().indexOf(txt) > -1));
+    return arr.filter(key => Object.values(obj[key]).some(val => (val || '').toLowerCase().indexOf(txt.toLowerCase()) > -1));
 }
 
 /**
