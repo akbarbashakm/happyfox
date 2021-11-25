@@ -5,7 +5,8 @@
         "designation": "Cheif Executive Officer",
         "team": "Product",
         "manager": null,
-        "img": "https://i.imgur.com/uk87y7L.jpg"
+        "img": "https://i.imgur.com/uk87y7L.jpg",
+        "short": "CEO"
     },
     "59": {
         "id": "59",
@@ -13,7 +14,8 @@
         "designation": "Cheif Technology Officer",
         "team": "Development & IT",
         "manager": "58",
-        "img": "https://i.imgur.com/I8N6wle.gif"
+        "img": "https://i.imgur.com/I8N6wle.gif",
+        "short": "CTO"
     },
     "60": {
         "id": "60",
@@ -21,7 +23,8 @@
         "designation": "Cheif Bussiness Officer",
         "team": "Bussiness Flow",
         "manager": "58",
-        "img": "https://i.imgur.com/Id57NSW.jpg"
+        "img": "https://i.imgur.com/Id57NSW.jpg",
+        "short": "CBO"
     },
     "61": {
         "id": "61",
@@ -29,7 +32,8 @@
         "designation": "Cheif Accounting Officer",
         "team": "Finance",
         "manager": "58",
-        "img": "https://i.imgur.com/NRYrB0l.jpeg"
+        "img": "https://i.imgur.com/NRYrB0l.jpeg",
+        "short": "CAO"
     },
     "62": {
         "id": "62",
@@ -37,7 +41,8 @@
         "designation": "Cheif Information Officer",
         "team": "Development & IT",
         "manager": "59",
-        "img": "https://i.imgur.com/Xdx7Ptn.jpeg"
+        "img": "https://i.imgur.com/Xdx7Ptn.jpeg",
+        "short": "CIO"
     },
     "63": {
         "id": "63",
@@ -45,7 +50,8 @@
         "designation": "Cheif Innovative Officer",
         "team": "Development & IT",
         "manager": "59",
-        "img": "https://i.imgur.com/eX7uYfG.jpeg"
+        "img": "https://i.imgur.com/eX7uYfG.jpeg",
+        "short": "CIO"
     },
     "64": {
         "id": "64",
@@ -53,7 +59,8 @@
         "designation": "Cheif Communication Officer",
         "team": "Bussiness Flow",
         "manager": "60",
-        "img": "https://i.imgur.com/waxFbz6.jpg"
+        "img": "https://i.imgur.com/waxFbz6.jpg",
+        "short": "CCO"
     },
     "65": {
         "id": "65",
@@ -61,7 +68,8 @@
         "designation": "Cheif Brand Officer",
         "team": "Bussiness Flow",
         "manager": "60",
-        "img": "https://i.imgur.com/Zi7qqQA.jpg"
+        "img": "https://i.imgur.com/Zi7qqQA.jpg",
+        "short": "CBO"
     },
     "66": {
         "id": "66",
@@ -69,7 +77,8 @@
         "designation": "Cheif Bussiness Officer",
         "team": "Bussiness Flow",
         "manager": "60",
-        "img": "https://i.imgur.com/0hhtbTn.jpeg"
+        "img": "https://i.imgur.com/0hhtbTn.jpeg",
+        "short": "CBO"
     },
     "67": {
         "id": "67",
@@ -77,6 +86,7 @@
         "designation": "Cheif Bussiness Officer",
         "team": "Bussiness Flow",
         "manager": "60",
-        "img": "https://i.imgur.com/I9XFqdd.jpg"
+        "img": "https://i.imgur.com/I9XFqdd.jpg",
+        "short": "CBO"
     }
 }
