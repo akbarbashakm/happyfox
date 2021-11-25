@@ -40,7 +40,7 @@ const Node = (props) => {
                                     setActiveEmployee(item)
                                 }} id={item} text={item} draggable="true" className="child" onDrop={(e) => {
                                     if (canDrag(employees, item, rootId)) {
-                                        drag(item, rootId) 
+                                        drag(item, rootId)
                                         setToastMessage(`${employees[rootId].name} reporting to ${employees[item].name}`);
                                     } else {
                                         setToastMessage(`Oops... You can't able to move`);
@@ -66,10 +66,10 @@ const Node = (props) => {
 }
 
 const mapStateToProps = ({
-    employees
+    nodeLists
 }) => {
     return {
-        employees
+        employees: { ...nodeLists }
     };
 };
 

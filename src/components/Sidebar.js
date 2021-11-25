@@ -7,6 +7,7 @@ import setActive from '../redux/actions/setActive';
 import { LeftSiderBar } from './common-components/Layout';
 import ListProfile from './common-components/ListProfile';
 import { search } from '../utils/helper';
+import setParent from '../redux/actions/setParent';
 
 /**
  * Side bar component render here
@@ -16,7 +17,7 @@ import { search } from '../utils/helper';
  */
 function SideBar({
     employees = {},
-    setActiveEmployee
+    setParentEl
 }) {
     const [serachValue, setValue] = useState("")
     return (
@@ -34,7 +35,7 @@ function SideBar({
                             // eslint-disable-next-line jsx-a11y/anchor-is-valid
                             <li onClick={(e) => {
                                 e && e.preventDefault();
-                                setActiveEmployee(key)
+                                setParentEl(key)
                             }} key={index}>
                                 <ListProfile employee={employees[key]} />
                             </li>
@@ -54,7 +55,7 @@ const mapStateToProps = ({ employees }) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        setActiveEmployee: bindActionCreators(setActive, dispatch)
+        setParentEl: bindActionCreators(setParent, dispatch)
     };
 };
 
