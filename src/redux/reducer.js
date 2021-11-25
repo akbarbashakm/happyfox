@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 import ActionTypes from "../constants/action-types";
 
 export const initialState = {

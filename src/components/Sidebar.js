@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import SearchField from 'react-search-field';
-import setActive from '../redux/actions/setActive';
 import { LeftSiderBar } from './common-components/Layout';
 import ListProfile from './common-components/ListProfile';
 import { search } from '../utils/helper';
