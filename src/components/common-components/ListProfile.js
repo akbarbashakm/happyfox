@@ -34,7 +34,9 @@ const RightContainer = styled.div`
     margin-left: 10px;
     span {
         display: block;
-        margin: 5px;
+        margin: 0px;
+        font-size: 13px;
+        font-style: italic;
     }
 `;
 
@@ -53,7 +55,8 @@ const ListProfile = ({
                 <img src={employee.img} alt="" />
             </LeftContainer>
             <RightContainer>
-                <span>{employee.name}</span>
+                <span>{employee.name} </span>
+                <span>{employee.designation.split(" ").map(a => a[0])} - {employee.team}</span>
             </RightContainer>
         </Root>
     )
