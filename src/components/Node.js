@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import dragEmployee from '../redux/actions/dragEmployee';
 import setActive from '../redux/actions/setActive';
+import setParent from '../redux/actions/setParent';
 import setToast from '../redux/actions/setToast';
 import { canDrag, getNodList } from '../utils/helper';
 import { Card, CardImage, Name, Role } from './common-components/Card';
@@ -23,7 +24,8 @@ const Node = (props) => {
         employees,
         setActiveEmployee,
         drag,
-        setToastMessage
+        setToastMessage,
+        setParentEl
     } = props;
     const nodeList = getNodList(employees, parentId);
     if (!nodeList.length)
@@ -42,6 +44,7 @@ const Node = (props) => {
                                     if (canDrag(employees, item, rootId)) {
                                         drag(item, rootId)
                                         setToastMessage(`${employees[rootId].name} reporting to ${employees[item].name}`);
+                                        setParentEl(null);
                                     } else {
                                         setToastMessage(`Oops... You can't able to move`);
                                     }
@@ -77,7 +80,8 @@ const mapDispatchToProps = (dispatch) => {
     return {
         setActiveEmployee: bindActionCreators(setActive, dispatch),
         drag: bindActionCreators(dragEmployee, dispatch),
-        setToastMessage: bindActionCreators(setToast, dispatch)
+        setToastMessage: bindActionCreators(setToast, dispatch),
+        setParentEl: bindActionCreators(setParent, dispatch)
     };
 };
 
